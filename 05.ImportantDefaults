@@ -1,0 +1,5 @@
+Stale queries are refetched automatically in the background when:
+New instances of the query mount
+The window is refocused
+The network is reconnected
+The query is optionally configured with a refetch interval

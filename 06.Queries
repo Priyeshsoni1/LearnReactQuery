@@ -1,0 +1,24 @@
+Query is declarative dependancy on a asynchronous source of data that is tied to unique key.
+having any promise including get and post, 
+if your method modifies data on the server always use useMutation hook.
+
+
+{
+    -a unique key for the query
+    -function that return a promise
+}
+
+
+function App(){
+    const resultObject=useQuery({queryKey:['todos],queryFn:fetchTodoList})
+}
+
+
+queryKey: refetching ,caching , and sharing you queries throughout your application helps
+useQuery: Having all information regarding the retured data
+
+function Todos() {
+  const { isPending, isError, data, error } = useQuery({
+    queryKey: ['todos'],
+    queryFn: fetchTodoList,
+  })}

@@ -1,0 +1,30 @@
+react query :state management library , simplifies fetching , caching and updating data.
+
+
+Great for server state or async
+:Is persisted remotely in a location you do not control or own
+Requires asynchronous APIs for fetching and updating
+Implies shared ownership and can be changed by other people without your knowledge
+Can potentially become "out of date" in your applications if you're not careful
+
+
+now problem arise in server state:
+caching,removing identical entities, updating,knowing when data is of date, reflecting updates as quickly as possible , performance optimization like pagination and lazyloading data , managin memory and garbage collection of serverstate, structural sharing.
+
+
+
+import {QueryClient,QueryClientProvider,useQuery} from '@/tanstack/react-query'
+
+cosnt queryClient =new queryClient();
+
+export default function App(){
+    return (
+        <QueryClientProvider client ={queryClient}>
+        <Example/>
+        </QueryClientProvider>
+    )
+}
+
+const queryFn=()=>{
+    fetch('abc.com').then((res)=>{res.json()})
+}

@@ -1,0 +1,9 @@
+ mutation is a change to the state of data. In React Query, a mutation is a function that performs a change to data on the server.
+
+Mutations are typically used to create, update, or delete data. For example, you could use a mutation to create a new todo item, update the status of a todo item, or delete a todo item.
+
+Mutations are different from queries in that they change the state of data on the server, while queries only fetch data from the server.
+
+To use a mutation in React Query, you use the useMutation hook. The useMutation hook takes two arguments: a mutation function and an onSuccess callback function.
+
+The mutation function is the function that performs the actual mutation. The onSuccess callback function is called when the mutation is successful.
